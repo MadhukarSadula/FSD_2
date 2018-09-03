@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+   <bean id = "student1" class = "com.model.Student">
+      <property name = "StudentId" value = "S001"/>
+      <property name="StudentName" value = "Steve"></property>
+      <property name="testdetails">
+      <list>
+      <ref bean="test1"/>
+      </list></property>
+   </bean>
+   
+   <bean id = "student2" class = "com.model.Student">
+      <property name = "StudentId" value = "S001"/>
+      <property name="StudentName" value = "Steve"></property>
+      <property name="testdetails">
+      <list>
+      <ref bean="test1"/>
+      <ref bean="test2"/>
+      </list></property>
+   </bean>
+   
+   <bean id = "test1" class = "com.model.Test">
+      <property name ="testId" value = "T001"/>
+      <property name="testName" value = "Core Java Test"></property>
+      <property name="testMarks" value="80" ></property>
+      </bean>
+      
+      <bean id = "test2" class = "com.model.Test">
+      <property name ="testId" value = "T002"/>
+      <property name="testName" value = "Python Test"></property>
+      <property name="testMarks" value="70" ></property>
+      </bean>
+
+</beans>
