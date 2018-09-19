@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Assigment6" basedir="." default="jar">
+<property name="src" value="src"/>
+<target name="clean" description="Cleaning build dir">
+<echo>Cleaning </echo>
+	<delete>
+<fileset dir="build">
+<include name="**/*.class" />
+</fileset>
+</delete>
+</target>
+
+<target name="prepare" description="preparing" >
+<mkdir dir="build"/>
+	<echo>preparing </echo>
+</target>
+<target name="compile" description="complie" depends="prepare">
+	<echo>Compiling </echo>
+
+<javac destdir = "build" source = "1.8" target = "1.8">
+         <src path = "src"/>
+ </javac>
+   
+</target>
+	<target name="jar" depends="compile" description="jar">
+		<mkdir dir="jar.dir"/>
+		        <jar destfile="jar.dir/${ant.project.name}.jar" basedir="build">
+		        	</jar>
+
+		
+	</target>
+</project>

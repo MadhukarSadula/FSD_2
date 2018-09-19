@@ -1,0 +1,12 @@
+<?xml version = "1.0"?>
+<project name = "Hello World Project" default = "welcome">
+   <target name = "welcome">
+      <echo>Hello World - Welcome to Apache Ant!</echo>
+   </target>
+   <target name = "details">
+      <echo>Assignment 1 of ANT topic in FSD program</echo>
+   </target>
+   <target name = "author">
+      <echo>Author is Madhukar Sadula</echo>
+   </target>
+</project>

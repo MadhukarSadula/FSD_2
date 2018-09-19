@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Assigment3" basedir="." default="clean;compile">
+<property name="src" value="src"/>
+<target name="clean" description="Cleaning build dir" depends="init">
+<echo>cleaning</echo>
+<delete>
+<fileset dir="build">
+<include name="**/*.class" />
+</fileset>
+</delete>
+</target>
+	<target name="init">
+	    <!-- Create the time stamp -->
+	    <tstamp/>
+	    <!-- Create the build directory structure used by compile -->
+	    <echo>init is working</echo>
+	  </target>
+
+<target name="prepare" description="preparing" depends="clean">
+<mkdir dir="build"/>
+<echo >preparing</echo>
+</target>
+<target name="clean;compile" description="complie" depends="prepare">
+<echo>clean and compiling</echo>
+<delete>
+
+<fileset dir="build">
+<include name="**/*.class" />
+</fileset>
+</delete>
+
+<javac destdir = "build" source = "1.8" target = "1.8">
+         <src path = "src"/>
+ </javac>
+   
+</target>
+</project>

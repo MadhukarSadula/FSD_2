@@ -1,0 +1,8 @@
+<?xml version = "1.0"?>
+<project name = "ANTfile" default = "target1">
+   <target name = "target1">
+      <echo>ANT with target1</echo>
+	  <property name="course" value="ANT"/>
+   </target>
+   
+</project>

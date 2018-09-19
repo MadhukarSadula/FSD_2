@@ -1,0 +1,25 @@
+<?xml version = "1.0"?>
+
+<project name = "Jnitfile" default ="target2">
+   <include  file="build1.xml" as="otherfile" />
+   <path id="classPath">
+    <pathelement location="lib/junit-4.11.jar" />
+</path>
+   <target name = "target2">
+      <echo>Junit with target2</echo>
+      <junit haltonerror="false" haltonfailure="false" fork="yes">
+      <test name = "com.tutorialspoint.UtilsTest"/>
+      <classpath path="lib.dir">
+            <path refid="classPath" />
+        </classpath>
+      
+   </junit>
+	  <property name="course" value="Junit"/>
+<antcall target="otherfile.target1">
+</antcall>
+
+
+   </target>
+   
+</project>
+
