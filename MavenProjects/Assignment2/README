@@ -1,0 +1,58 @@
+creating project:
+Creating maven Project:
+mvn archetype:generate -DgroupId=com.wipro.topgear -DartifactId=Assignment2 -DarchetypeArtifactId= maven-archetype-quickstart -DinteractiveMode=false
+
+Then modified code and added below dependency:
+<dependency>
+    <groupId>org.apache.commons</groupId>
+    <artifactId>commons-lang3</artifactId>
+    <version>3.0</version>
+</dependency>
+
+While building faced few errors realted java JRE and JDK,but resolved then and compiled aand tested the project.
+
+MVN TEST:
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Assignment2 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ Assignment2 ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory E:\FSD\MavenProjects\Assignment2\src\main\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ Assignment2 ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ Assignment2 ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory E:\FSD\MavenProjects\Assignment2\src\test\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ Assignment2 ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ Assignment2 ---
+[INFO] Surefire report directory: E:\FSD\MavenProjects\Assignment2\target\surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running com.wipro.topgear.AppTest
+String:testName name of the test case
+string length:30
+Words in the string:6
+string To Upper:TESTNAME NAME OF THE TEST CASE
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec
+
+Results :
+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 3.826 s
+[INFO] Finished at: 2018-09-24T14:38:13+05:30
+[INFO] Final Memory: 9M/112M
+[INFO] ------------------------------------------------------------------------
